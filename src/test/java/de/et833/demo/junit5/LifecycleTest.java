@@ -1,4 +1,4 @@
-package de.et833.demo.junit;
+package de.et833.demo.junit5;
 
 import org.junit.jupiter.api.*;
 
