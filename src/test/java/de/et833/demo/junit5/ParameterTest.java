@@ -1,6 +1,5 @@
 package de.et833.demo.junit5;
 
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -17,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ParameterTest {
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "Test mit Int-Wert \"{0}\"")
     @MethodSource("stringProvider")
     void testWithSimpleMethodSource(String argument) {
         assertTrue(argument.equals("foo") || argument.equals("bar"));
@@ -69,7 +68,6 @@ public class ParameterTest {
         assertEquals(a * b, p);
     }
 
-
     @ParameterizedTest
     @EnumSource(value = SomeEnum.class, names = {"EINS", "DREI"})
     void testEnumSource(SomeEnum someEnum) {
@@ -97,7 +95,8 @@ public class ParameterTest {
 
         @Override
         public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
-            return Stream.of("Helmut", "Werner", "Klaus").map(Arguments::of);
+            return Stream.of("Helmut", "Werner", "Klaus")
+                    .map(Arguments::of);
         }
     }
 

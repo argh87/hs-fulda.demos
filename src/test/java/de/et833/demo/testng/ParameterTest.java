@@ -1,20 +1,18 @@
 package de.et833.demo.testng;
 
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 /**
- * depedency: org.junit.jupiter:junit-jupiter-params
+ * depedency: org.testng:testng
  */
 public class ParameterTest {
     @DataProvider(name = "intProvider")
     public static Object[][] data() {
-        return new Object[][]{
-                {5, 5, 25}, {2, 8, 16}, {12, 6, 72}, {1, 1, 1}};
+        return new Object[][]{{5, 5, 25}, {2, 8, 16}, {12, 6, 72}, {1, 1, 1}};
     }
 
     @Test(dataProvider = "intProvider")

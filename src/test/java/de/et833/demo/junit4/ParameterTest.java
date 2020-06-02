@@ -1,6 +1,5 @@
 package de.et833.demo.junit4;
 
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -27,8 +26,7 @@ public class ParameterTest {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][]{
-                {5, 5, 25}, {2, 8, 16}, {12, 6, 72}, {1, 1, 1}});
+        return Arrays.asList(new Object[][]{{5, 5, 25}, {2, 8, 16}, {12, 6, 72}, {1, 1, 1}});
     }
 
     @Test
