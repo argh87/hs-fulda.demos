@@ -1,4 +1,4 @@
-# Parameterizes tests in JUnit 4, JUnit 5 and TestNG
+# Parameterized tests in JUnit 4, JUnit 5 and TestNG
 
 ## Build
 
