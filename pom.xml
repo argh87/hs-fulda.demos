@@ -116,9 +116,14 @@
 
     </dependencies>
 
+
+
     <profiles>
         <profile>
             <id>testng</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -154,6 +159,9 @@
 
         <profile>
             <id>junit5</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
 
